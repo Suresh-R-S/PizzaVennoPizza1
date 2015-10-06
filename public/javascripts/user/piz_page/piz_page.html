@@ -1,0 +1,23 @@
+<div class="col-md-12">
+<table>
+<tr><h2>{{ppCtrl.pizzadetail.p_name}}</h2><br/></tr>
+<tr><img ng-src="{{ppCtrl.pizzadetail.pic}}" width="150"><br/></tr>
+<tr>{{ppCtrl.pizzadetail.desc}}<br/></tr>
+<tr><h3>Rate: &#8377{{ppCtrl.pizzadetail.rate}}</h3></tr>
+<tr>
+		<select ng-model="ppCtrl.obj.qty" ng-click = "ppCtrl.test()">
+  			<option value="">Select Quantity</option>
+  			<option value="1">1</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  			<option value="5">5</option>
+		</select> 
+</tr>
+<br/><br/><br/>
+<tr>
+	<a style="text-decoration:none;" href="#/cart"><h3>Add to cart</h3></a>
+</tr>
+</table>
+
+</div>

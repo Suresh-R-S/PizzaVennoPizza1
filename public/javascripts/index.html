@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="pvp">
+<head>
+  <title>Pizza Venno Pizza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+<link rel="stylesheet" type="text/css" href="/stylesheets/pizza.css">
+</head>
+<body>
+
+
+<div id="d1">
+<h1>PIZZA VENNO PIZZA</h1>
+</div>
+<div id="d2">
+<input ng-model="t1.p_name" type="text" placeholder="search pizza.."/><br/><br/>
+<a style="text-decoration:none;" href="#/adminlogin">Admin Login</a><br/><br/>
+<a style="text-decoration:none;" href="#/">Home</a>
+</div>
+<div ng-view id="d3">
+</div>
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <!-- JS from Bower Components -->
+  <script src="bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="user/user.js"></script>
+  <script src="user/piz_details/piz_details.js"></script>
+  <script src="user/piz_details/PizDetailsServ.js"></script>
+
+  <script src="user/piz_page/piz_page.js"></script>
+  <script src="user/piz_page/PizPageServ.js"></script>
+  <script src="user/piz_cart/piz_cart.js"></script>
+  <script src="user/userdetails/userdetails.js"></script>
+  <script src="user/userdetails/UserDetailsServ.js"></script>
+  <script src="admin/admin.js"></script>
+  <script src="admin/adminlogin/adminlogin.js"></script>
+  <script src="admin/adminhome/adminhome.js"></script>
+  <script src="admin/adminhome/AdminHomeServ.js"></script>
+  <script src="admin/delivered/delivered.js"></script>
+  <script src="admin/delivered/deliveredServ.js"></script>
+  <!-- Add New Component JS Above -->
+</body>
+</html>

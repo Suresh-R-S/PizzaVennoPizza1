@@ -1,0 +1,9 @@
+<div class="col-md-12">
+<table>
+	<tr ng-repeat="items in pCtrl.details | filter:t1">
+
+		<td><a style="text-decoration:none;" href="#/pizza/{{items.p_name}}">{{items.p_name}}</a></td>
+		<td><a href="#/pizza/{{items.p_name}}"><img ng-src="{{items.pic}}" width="100"></a></td>
+	</tr>
+</table>
+</div>

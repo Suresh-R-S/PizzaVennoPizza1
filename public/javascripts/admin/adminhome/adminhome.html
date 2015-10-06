@@ -1,0 +1,26 @@
+<div class="col-md-12">
+<h2>Order List</h2>
+<a href="#/delivered">Delivered List</a>
+<table style="width:400%;" border="1px">
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Contact No.</th>
+<th>Order</th>
+</tr>
+<tr ng-repeat="i in ahCtrl.details">
+	<td>{{i.u_name}}</td>
+	<td>{{i.addr}}</td>
+	<td>{{i.cno}}</td>
+	<td>
+	<ul ng-repeat="j in i.order"><br/>
+      <li>Pizza name: {{j.p_name}}</li>
+      <li>Rate: {{j.rate}}</li>
+      <li>Quantity: {{j.qty}}</li>
+      <li>Cost: {{j.cost}}</li>
+    </ul>
+	</td>
+<td><button ng-click="ahCtrl.deliver(i._id)">Deliver</button></td>
+</tr>
+</table>
+</div>

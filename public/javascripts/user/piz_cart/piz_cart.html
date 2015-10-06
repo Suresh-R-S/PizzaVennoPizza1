@@ -1,0 +1,20 @@
+<div class="col-md-12">
+<table style="width:200%;">
+	<tr>
+	<th>PIZZA</th>
+	<th>RATE</th>
+	<th>QTY</th>
+	<th>AMOUNT</th>
+	</tr>
+	<tr ng-repeat="i in cCtrl.details">
+		<td>{{i.p_name}}</td>
+		<td>&#8377{{i.rate}}</td>
+		<td>{{i.qty}}</td>
+		<td>&#8377{{i.cost}}</td>
+	</tr>
+</table>
+
+<h3>Grand Total: &#8377{{cCtrl.total}}</h3>
+<a style="text-decoration:none;" href="#/"> &#9754 Add More </a><br/><br/>
+<a style="text-decoration:none;" href="#/userdetails"> BUY &#9755 </a>
+</div>
