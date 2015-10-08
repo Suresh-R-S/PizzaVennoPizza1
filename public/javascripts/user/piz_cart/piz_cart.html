@@ -6,7 +6,7 @@
 	<th>QTY</th>
 	<th>AMOUNT</th>
 	</tr>
-	<tr ng-repeat="i in cCtrl.details">
+	<tr ng-repeat="i in vm.details">
 		<td>{{i.p_name}}</td>
 		<td>&#8377{{i.rate}}</td>
 		<td>{{i.qty}}</td>
@@ -14,7 +14,7 @@
 	</tr>
 </table>
 
-<h3>Grand Total: &#8377{{cCtrl.total}}</h3>
+<h3>Grand Total: &#8377{{vm.total}}</h3>
 <a style="text-decoration:none;" href="#/"> &#9754 Add More </a><br/><br/>
 <a style="text-decoration:none;" href="#/userdetails"> BUY &#9755 </a>
 </div>

@@ -1,7 +1,7 @@
 (function () {
-function PizDetailsServ($http){
+function PizDetailsServ($http,link){
 	 this.getDetails = function()
-	 {return $http.get('http://localhost:3000/pizza');
+	 {return $http.get(link+'/pizza');
 	 };
 }
 angular.module('user')

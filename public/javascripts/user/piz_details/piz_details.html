@@ -1,9 +1,40 @@
-<div class="col-md-12">
-<table>
-	<tr ng-repeat="items in pCtrl.details | filter:t1">
+<div class="col-md-12"> 
+<table> 
+  <tr>
+    <tr><h3>Select your Pizza</h3></tr>
+    <div id="slides_control">
+<carousel interval="vm.interval" disable-animation="true">
+  <slide ng-repeat="items in vm.details | filter:t1">
+    <a href="#/pizza/{{items.p_name}}"><img ng-src="{{items.pic}}"></a>
+    <p>{{items.p_name}}</p>
+  </slide>
+</carousel>
+</div>
+  </tr><br/><br/><br/><br/>
+  <tr><h3>Quick Select</h3></tr>
+	<tr> 
+    <ul class="img" ng-repeat="items in vm.details | filter:t1">
+    <img ng-src="{{items.pic}}" style="width:140px;" class="btn btn-default" ng-click="isCollapsed = !isCollapsed"><br/>
 
-		<td><a style="text-decoration:none;" href="#/pizza/{{items.p_name}}">{{items.p_name}}</a></td>
-		<td><a href="#/pizza/{{items.p_name}}"><img ng-src="{{items.pic}}" width="100"></a></td>
+  <div collapse="!isCollapsed">
+    <div class="well well-lg">Rate: &#8377{{items.rate}}
+      <br/>
+      <select ng-model="vm.obj.qty" ng-click = "vm.test(items)">
+        <option value="">Select Quantity</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <br/>
+      <a style="text-decoration:none;" href="#/cart">Add to cart</a> 
+
+    </div>
+  </div>
+  {{items.p_name}}
+  <hr>
+    </ul> 
 	</tr>
 </table>
 </div>

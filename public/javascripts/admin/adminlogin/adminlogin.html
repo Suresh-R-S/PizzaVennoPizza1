@@ -1,9 +1,10 @@
 <div class="col-md-12">
 <h1>Admin</h1>
-<form ng-submit="aCtrl.submit()">
+<form ng-submit="vm.submit()">
 <h3>Enter the following details</h3><br/>
-<input type="text" ng-model="aCtrl.obj.aname" placeholder="Name"/> 
-<input type="password" ng-model="aCtrl.obj.pwd" placeholder="Password"/><br/>
+<input type="text" ng-model="vm.obj.aname" placeholder="Name"/> <br/>
+<input style = "color:black;"type="password" ng-model="vm.obj.pwd" placeholder="Password"/><br/>
+<span id="failmsg" ng-show="vm.sta">Invalid login credentials..Try again!!</span><br/>
 <input type="submit" value="login"/>
 </form>
 

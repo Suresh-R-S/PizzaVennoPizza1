@@ -7,22 +7,22 @@ angular.module('user').config(function($routeProvider) {
      when('/', 
      {templateUrl:'user/piz_details/piz_details.html',
 	  controller: 'PizDetailsCtrl',
-	  controllerAs:'pCtrl'
+	  controllerAs:'vm'
 	 }).
 	 when('/cart', 
 	 {templateUrl:'user/piz_cart/piz_cart.html',
 	  controller:'PizCartCtrl',
-	  controllerAs:'cCtrl'
+	  controllerAs:'vm'
 	 }).
 	 when('/userdetails', 
 	 {templateUrl:'user/userdetails/userdetails.html',
 	  controller:'UserDetailsCtrl',
-	  controllerAs:'uCtrl'
+	  controllerAs:'vm'
 	 }).
 	 when('/pizza/:pName',
 	 {templateUrl:'user/piz_page/piz_page.html',
 	  controller:'PizPageCtrl',
-	  controllerAs:'ppCtrl'
+	  controllerAs:'vm'
 	 });
     /* Add New Routes Above */
 });

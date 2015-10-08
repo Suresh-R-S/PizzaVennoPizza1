@@ -6,21 +6,25 @@
 	<meta charset="utf-8">
   <link href="app.less" type="text/css" rel="stylesheet/less">
 <link rel="stylesheet" type="text/css" href="/stylesheets/pizza.css">
+<link rel="icon" 
+      type="image/png" 
+      href="/images/pvp.png">
 </head>
 <body>
 
-
+<div>
 <div id="d1">
 <h1>PIZZA VENNO PIZZA</h1>
 </div>
 <div id="d2">
 <input ng-model="t1.p_name" type="text" placeholder="search pizza.."/><br/><br/>
 <a style="text-decoration:none;" href="#/adminlogin">Admin Login</a><br/><br/>
-<a style="text-decoration:none;" href="#/">Home</a>
+<a style="text-decoration:none;" href="#/">Home</a><br/><br/>
+<a style="text-decoration:none;" href="#/cart">View Cart</a>
 </div>
 <div ng-view id="d3">
 </div>
-
+</div>
   <!-- Livereload script for development only (stripped during dist build) -->
   <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
 
@@ -56,6 +60,7 @@
   <script src="admin/adminhome/AdminHomeServ.js"></script>
   <script src="admin/delivered/delivered.js"></script>
   <script src="admin/delivered/deliveredServ.js"></script>
+  <script src="user/piz_details/disableAnimation.js"></script>
   <!-- Add New Component JS Above -->
 </body>
 </html>

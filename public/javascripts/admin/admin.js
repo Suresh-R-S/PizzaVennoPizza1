@@ -6,17 +6,17 @@ angular.module('admin').config(function($routeProvider) {
 	when('/adminlogin',
 	    {templateUrl:'admin/adminlogin/adminlogin.html',
 		 controller:'AdminLoginCtrl',
-		 controllerAs:'aCtrl'
+		 controllerAs:'vm'
 		}).
     when('/adminhome',
         {templateUrl:'admin/adminhome/adminhome.html',
 		 controller:'AdminHomeCtrl',
-		 controllerAs:'ahCtrl'
+		 controllerAs:'vm'
 		}).
     when('/delivered',
         {templateUrl:'admin/delivered/delivered.html',
 		 controller:'deliveredCtrl',
-		 controllerAs:'dlCtrl'
+		 controllerAs:'vm'
 		});
     /* Add New Routes Above */
 

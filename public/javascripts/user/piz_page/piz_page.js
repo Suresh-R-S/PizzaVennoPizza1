@@ -15,11 +15,8 @@ function PizPageCtrl($routeParams,$http,serv,PizDetailsServ){
            obj.rate = vm.pizzadetail.rate;
            obj.qty = vm.obj.qty;
            obj.cost = obj.rate * obj.qty;
-           //console.log("name: ",obj.p_name);
-           //console.log("rate: ",obj.rate);
-           //console.log("qty: ",vm.obj.qty);
-            serv.p1(obj);
-            console.log("P2:",serv.p2());
+           serv.p1(obj);
+           console.log("P2:",serv.p2());
           };
 
         });

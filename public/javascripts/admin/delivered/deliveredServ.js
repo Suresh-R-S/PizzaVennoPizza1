@@ -1,8 +1,8 @@
 (function () {
-function deliveredServ($http)
+function deliveredServ($http,link)
 {
 	 this.get_dDetails = function()
-    {return $http.get('http://localhost:3000/deliveredlist');
+    {return $http.get(link+'/deliveredlist');
 	}; 
 }
 angular

@@ -1,6 +1,6 @@
 (function () {
-angular.module('pvp', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'user', 'admin']);
-
+angular.module('pvp', ['ui.bootstrap', 'ui.utils', 'ngRoute', 'ngAnimate', 'user', 'admin'])
+       .constant('link','http://localhost:3000');
 angular.module('pvp').config(function($routeProvider) {
 
     /* Add New Routes Above */

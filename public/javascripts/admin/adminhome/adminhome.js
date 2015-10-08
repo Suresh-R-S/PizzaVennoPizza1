@@ -1,11 +1,12 @@
 (function () {
 function AdminHomeCtrl(AdminHomeServ){
     var vm = this;
-    vm.details = AdminHomeServ.getDetails();  
-	  vm.details.success(function (data) {
+    vm.showtab = true;
+    vm.details = AdminHomeServ.getDetails();
+    vm.details.success(function (data) {
 		if(data === 'nothing') 
-    {vm.details = {};
-     window.alert('No more orders');
+    {vm.showtab = false;
+     vm.details = {};
     }
     else 
     {vm.details = data;
@@ -35,8 +36,8 @@ function AdminHomeCtrl(AdminHomeServ){
 	    vm.details.success(function (data) {
             console.log("vm.details:",data);
             if(data === 'nothing') 
-            {vm.details = {};
-             window.alert('No more orders');
+            {vm.showtab = false;
+             vm.details = {};
             }
             else 
             {vm.details = data;

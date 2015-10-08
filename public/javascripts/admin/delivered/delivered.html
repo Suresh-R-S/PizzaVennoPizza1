@@ -1,6 +1,7 @@
 <div class="col-md-12">
 <h2>Delivered List</h2>
-<a href="#/adminhome">Order List</a>
+<a href="#/adminhome" style="text-decoration:none;">Order List</a><br/>
+<span ng-show = "vm.showtab"> 
 <table style="width:400%;" border="1px">
 <tr>
 <th>Name</th>
@@ -8,7 +9,7 @@
 <th>Contact No.</th>
 <th>Order</th>
 </tr>
-<tr ng-repeat="i in dlCtrl.details">
+<tr ng-repeat="i in vm.details">
 	<td>{{i.u_name}}</td>
 	<td>{{i.addr}}</td>
 	<td>{{i.cno}}</td>
@@ -20,8 +21,8 @@
       <li>Cost: {{j.cost}}</li>
     </ul>
 	</td>
-<!--<td><button ng-click="ahCtrl.deliver(i._id)">Deliver</button></td>-->
 </tr>
 </table>
-
+</span>
+<span id="failmsg" ng-show = "!vm.showtab">No Orders Delivered</span>
 </div>
