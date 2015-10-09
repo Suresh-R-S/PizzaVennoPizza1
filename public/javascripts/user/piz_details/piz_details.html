@@ -1,4 +1,9 @@
-<div class="col-md-12"> 
+<div id="d2">
+<input ng-model="t1.p_name" type="text" placeholder="search pizza.."/><br/><br/>
+<a style="text-decoration:none;" href="#/adminlogin">Admin Login</a><br/><br/>
+<a style="text-decoration:none;" href="#/cart">View Cart</a>
+</div>
+<div class="col-md-12" id="d3"> 
 <table> 
   <tr>
     <tr><h3>Select your Pizza</h3></tr>
@@ -11,7 +16,8 @@
 </carousel>
 </div>
   </tr><br/><br/><br/><br/>
-  <tr><h3>Quick Select</h3></tr>
+  <tr><h3>Quick Select</h3><br/>
+  </tr>
 	<tr> 
     <ul class="img" ng-repeat="items in vm.details | filter:t1">
     <img ng-src="{{items.pic}}" style="width:140px;" class="btn btn-default" ng-click="isCollapsed = !isCollapsed"><br/>
