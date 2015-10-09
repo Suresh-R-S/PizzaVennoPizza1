@@ -4,8 +4,7 @@ function PizCartCtrl(serv){
   vm.showtab = true;
   vm.details = serv.p2();
   if(!vm.details)
-  {
-  	vm.showtab = false;
+  {vm.showtab = false;
   }
     console.log("Cart Details: ",vm.details);
       vm.total = serv.p3();

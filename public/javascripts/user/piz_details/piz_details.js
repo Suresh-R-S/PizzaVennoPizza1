@@ -1,7 +1,7 @@
 (function () {
 function PizDetailsCtrl(PizDetailsServ,serv){
 	var vm = this;
-
+  vm.sta = false;
   vm.interval = 3000;
   vm.isCollapsed = true;
   vm.details = PizDetailsServ.getDetails();
@@ -11,10 +11,10 @@ function PizDetailsCtrl(PizDetailsServ,serv){
            console.log("details: ",vm.details);
          });
   vm.test = function(pizza) 
-  {
+  { vm.sta = true;
     var obj = {};
     obj.p_name = pizza.p_name;
-    console.log("Pizzaname:",obj.p_name)
+    console.log("Pizzaname:",obj.p_name);
     obj.rate = pizza.rate;
     obj.qty = vm.obj.qty;
     obj.cost = pizza.rate * obj.qty;

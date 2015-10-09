@@ -30,6 +30,11 @@ angular.module('user')
           console.log("inside P6");
            return adpwd;
         };
+        this.p7 = function(){
+          console.log("inside P7");
+          arr = [];
+          total = 0;
+        };
        
        }); 
 })();

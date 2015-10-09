@@ -10,6 +10,7 @@ function UserDetailsCtrl(UserDetailsServ,serv,$location){
         vm.obj.order=obj1;
         vm.obj.d_status= true;
         vm.added = UserDetailsServ.add_details(vm.obj);
+        serv.p7();
         vm.added.success(function(data) {
         vm.sta = true;
             if (data.errors) {

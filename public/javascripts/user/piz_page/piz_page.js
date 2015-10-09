@@ -1,6 +1,7 @@
 (function () {
 function PizPageCtrl($routeParams,$http,serv,PizDetailsServ){
         var vm = this;
+        vm.sta = false;
         vm.name = $routeParams.pName;
         vm.details = PizDetailsServ.getDetails();
         vm.details.success(function(data) {
@@ -9,6 +10,7 @@ function PizPageCtrl($routeParams,$http,serv,PizDetailsServ){
           })[0];
 
           vm.test = function() {
+          vm.sta = true;
           var obj = {};
 
            obj.p_name = vm.pizzadetail.p_name;
